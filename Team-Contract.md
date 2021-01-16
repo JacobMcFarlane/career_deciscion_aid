@@ -4,23 +4,25 @@ The purpose of this contract is to establish ground rules regarding teamwork, co
 
 ## Key Teamwork Aspects
 
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Teamwork Aspects                        | Group´s Personal Take                                                                            |
-+=========================================+==================================================================================================+
-| Expected Work Hours Per Week            | 6 to 12 hours of weekly work per-person                                                          |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Schedule of Group Meetings              | Two Reunions on Friday and Saturday respectively                                                 |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Working Style                           | Stand-ups and the beginning of the reunion, presenting the advanced work                         |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Uploading Advances to Online Repository | Uploads via pull requests                                                                        |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Work Quality                            | Expected seriousness and professionalism in every instance of the project                        |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
-| Work Revisions                          | Made between one another when revising pull requests (one cannot accept their own pull requests) |
-+-----------------------------------------+--------------------------------------------------------------------------------------------------+
 
-## Personal Expectations and Requirements 
+* Expected Work Hours Per Week : 6 to 12 hours of weekly work per-person.
+
+* Schedule of Group Meetings : Two Reunions on Friday and Saturday respectively.
+
+* Working Style :  Stand-ups and the beginning of the reunion, presenting the advanced work.
+
+* Uploading Advances to Online Repository :  Uploads via pull requests.
+
+* Work Quality : Expected seriousness and professionalism in every instance of the project.
+
+* Work Revisions : Made between one another (one cannot accept their own pull requests).
+
+
+
+
+
+
+## Personal Expectations and Requirements
 
 -   Get to know each other beyond MDS.
 
