@@ -179,9 +179,13 @@ rubric={reasoning:12,writing:2}
 
 Questions:
 	Which languages are most commonly used in which fields?
+	
 	Which fields pay the best?
+	
 	How many years of experience do those in the field currently have?
+	
 Usage Scenario:
+
 	Jim is a student in a Data Science program. He's interested in becoming a Machine Learning engineer but not entirely sure which frameworks and programming languages are most common. He's looked at a few job postings, but he wants to get a big picture so he can better allocate his time. Jim uses our dashboard and sees that among frameworks TensorFlow is the most used among Machine Learning Engineers. SQL, surprisingly, is a programming language that many use on a regular basis. Since he feels a little shaky on his SQL he decides to allocate more of his time to the deepening his SQL and lands his dream job.
 
 ## 3. Description of your app & sketch
