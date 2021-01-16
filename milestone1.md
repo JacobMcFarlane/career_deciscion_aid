@@ -112,11 +112,12 @@ Be brief and clear.
 
 Example writeup:
 
-> Our role: Data scientist consultancy firm
+> Our role: Data scientist research team
 >
-> Target audience: Health care administrators
+> Target audience: Anyone who is interested in looking for a job in data science and machine learning field.(Potentially including all MDS students)
 >
-> Missed medical appointments cost the healthcare system a lot of money and affects the quality of care. If we could understand what factors lead to missed appointments it may be possible to reduce their frequency. To address this challenge, we propose building a data visualization app that allows health care administrators to visually explore a dataset of missed appointments to identify common factors. Our app will show the distribution of factors contributing to appointment show/no show and allow users to explore different aspects of this data by filtering and re-ordering on different variables in order to compare factors that contribute to absence.
+> Data science and computer science starts to get really popular in recent years. Such popularity attracts more people to join and even transfer into this field without knowing too much about it. In fact, data science and computer science is a very large and complex field with various career options, such as data analyst, soft engineer etc. Those different career choices can have completely different concentrataion and skill requirements. Therefore, we propose buliding a public available data visualization app to allow people to visually explore the current job market for data science and computer science in more details to indentify the main difference between those occupations. Our app will show the average salary, and the distribution of required programming and machine learning skills across different jobs in the field. It will also allow audience to explore the job market more by filtering on more variables together but not only job title, such as the year of experience, eudcation level. 
+
 
 ### Section 2: Description of the data
 rubric={reasoning:8,writing:2}
