@@ -22,7 +22,7 @@ Which programming languages/machine learning framework are most commonly used in
 	
 Which fields pay the best?   
 	
-How many years of experience do those in the field currently have?   
+Among different years of experience and different fields, how most commly used data science skills and salary differentiate?   
 	
 Usage Scenario:
 
