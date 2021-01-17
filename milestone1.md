@@ -112,11 +112,12 @@ Be brief and clear.
 
 Example writeup:
 
-> Our role: Data scientist consultancy firm
+> Our role: Data scientist research team
 >
-> Target audience: Health care administrators
+> Target audience: Anyone who is interested in looking for a job in data science, machine learning and computer science field.(Potentially including all MDS students)
 >
-> Missed medical appointments cost the healthcare system a lot of money and affects the quality of care. If we could understand what factors lead to missed appointments it may be possible to reduce their frequency. To address this challenge, we propose building a data visualization app that allows health care administrators to visually explore a dataset of missed appointments to identify common factors. Our app will show the distribution of factors contributing to appointment show/no show and allow users to explore different aspects of this data by filtering and re-ordering on different variables in order to compare factors that contribute to absence.
+> Data science and computer science starts to get really popular in recent years. Such popularity attracts more people to join and even transfer into this field without knowing too much about it. In fact, data science and computer science is a very large and complex field with various career options, such as data analyst, soft engineer etc. Those different career choices can have completely different concentrataion and skill requirements. Therefore, we propose buliding a public available data visualization app to allow people to visually explore the current job market for data science and computer science in more details to indentify the main difference between those occupations. Our app will show the average salary, and the distribution of required programming and machine learning skills across different jobs in the field. It will also allow audience to explore the job market more by filtering on more variables together but not only job title, such as the year of experience, eudcation level. 
+
 
 ### Section 2: Description of the data
 rubric={reasoning:8,writing:2}
@@ -156,17 +157,7 @@ so that you have everything in one place.
 
 Example writeup:
 
-> We will be visualizing a dataset of approximately 300,000 missed patient appointments.
-> Each appointment has 15 associated variables
-> that describe the patient who made the appointment
-> (`patient_id`, `gender`, `age`),
-> the health status (`health_status`) of the patient
-> (Hypertension, Diabetes, Alcohol intake, physical disabilities),
-> information about the appointment itself (`appointment_id`, `appointment_date`),
-> whether the patient showed up (`status`),
-> and if a text message was sent to the patient about the appointment (`sms_sent`).
-> Using this data we will also derive a new variable,
-> which is the predicted probability that a patient will show up for their appointment (`prob_show`).
+> We will be visualizing a dataset of the Kaggle Machine Learning & Data Science Survey for 2020, which includes 20,036 responses/individuals. Each response has 39 associated variables melted in more than 300 columns that are corresponding to 39 questions in the survey, as the responses to multiple selection questions were split into multiple columns (with one column per answer choice). The variables describe the individuals who are currently in the data science and computer science fields(`education(Q4)`, `gender(Q2)`, `age(Q4)`), their current role(`job_title(Q5)`), thier salary range(`compensation(Q24)`), the tools they used on a regular basis(`programming_language(Q7)`, `IDE(Q9)`, `data_visualization_libraries(Q14)`,  `business_intelligence(Q31)`, `primary_tool(Q38)`), and machine learning tools/algorithms they used on a regular basis(`machine_learning_framework(Q16)`, `machine_learning_algorithm(Q17)`).
 
 Remember if your dataset has _a lot_ of columns,
 stick to summaries and avoid listing out every single column.
