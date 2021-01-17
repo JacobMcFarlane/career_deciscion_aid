@@ -17,4 +17,4 @@ Across the top of our dashboard, a drop-down menu will allow our user to filter 
 
 
 
-![dashboard](figures/mockup.png)
+![dashboard](figures/mockup.PNG)
