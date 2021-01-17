@@ -1,6 +1,6 @@
 # Milestone 1 - Dashboard proposal
 
-- Group Member: Santiago Rugeles Schoonewolff, Jacob McFarlane, Yuyan Guo
+Group Member: Santiago Rugeles Schoonewolff, Jacob McFarlane, Yuyan Guo
 
 ### Section 1: Motivation and Purpose
 
