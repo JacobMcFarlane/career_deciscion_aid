@@ -1,13 +1,3 @@
----
-title: "Career-Decision-Aid Dashboard"
-author: MDS DSCI 532 Group 9
-date: "01/15/2020"
-always_allow_html: true
-output: 
-  html_document:
-    keep_md: yes
-    toc: true
----
 
 
 
