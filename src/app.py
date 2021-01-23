@@ -9,7 +9,7 @@ import altair as alt
 
 
 
-kaggle_survey = pd.read_csv(r'data/Processed/general_processed_data.csv', skiprows=[1])
+kaggle_survey = pd.read_csv(r'data/Processed/general_processed_data.csv')
 languages_barplot_data =  pd.read_csv(r'data/Processed/lang_barplot_data.csv')
 ml_barplot_data = pd.read_csv(r'data/Processed/ml_barplot_data.csv')
 fluctuation_plot_data = pd.read_csv(r'data/Processed/Fluctuation_plot_data.csv')
@@ -60,15 +60,29 @@ app.layout = dbc.Container([
              ])
     ]),
     
-    html.Br(),
+    #html.Br(),
     dbc.Row([
-        dbc.Col([html.Iframe(id="lang_bar",style={'border-width': '0', 'width': '300%', 'height': '500px'})], md=6),
-        dbc.Col([html.Iframe(id ="ml_bar",style={'border-width': '0', 'width': '300%', 'height': '500px'})])
+        dbc.Col([html.Iframe(id="lang_bar",style={'border-width': '0', 'width': '300%', 'height': '350px'})], md=6),
+        dbc.Col([html.Iframe(id ="ml_bar",style={'border-width': '0', 'width': '300%', 'height': '350px'})])
        ]),
 
+    html.Br(),
+    dbc.Row([
+        dbc.Col([dbc.Row([html.Label(["Median Salary - Lowest Range:", dbc.Card(dbc.CardBody(id='median_salary_l'), style={'text-align': 'center', 'width': '200%'}, color='warning')])]), 
+        dbc.Row([html.Label(["Median Salary - Highest Range:", dbc.Card(dbc.CardBody(id='median_salary_h'), style={'text-align': 'center', 'width': '200%'}, color='warning')])])], md=6),
+        #html.Br(),
+        dbc.Col([html.Iframe(id="fluct_points", style={'border-width': '0', 'width': '600%', 'height': '600px'})], md=6)
+       ])])
+
+    #dbc.Row([
+        #dbc.Col([html.Label(["Median Salary - Lowest Range:", html.Div(id='median_salary_l', style={'color' : 'blue'})]), 
+        #html.Label(["Median Salary - Highest Range:", html.Div(id='median_salary_h', style={'color' : 'blue'})])], md=6),
+        #html.Br(),
+        #dbc.Col([html.Iframe(id="fluct_points",style={'border-width': '0', 'width': '600%', 'height': '600px'})], md=6)
+       #])])
     
     #dcc.Textarea(id='widget-2'),
-    html.Iframe(id="fluct_points",style={'border-width': '0', 'width': '600%', 'height': '600px'})])
+    #html.Iframe(id="fluct_points",style={'border-width': '0', 'width': '600%', 'height': '600px'})])
 
 
 
@@ -82,7 +96,8 @@ def plot_languages_barplot(job, prog_exp__val):
     lang_barplot = alt.Chart(languages_barplot_data.query("Q5 == @job & Q6 == @exp_range"), 
             title = "Most Used Programming Languages").mark_bar().encode(
         alt.Y("selected_lang", title="Programming Languages", sort="-x"),
-        alt.X("count()"))
+        alt.X("count()"),
+        alt.Tooltip("count()")).interactive()
     return lang_barplot.to_html()
 
 @app.callback(
@@ -94,7 +109,8 @@ def plot_ml_barplot(job, prog_exp__val):
     ml_barplot = alt.Chart(ml_barplot_data.query("Q5 == @job & Q6 == @exp_range"), 
             title = "Most Used Machine Learning Methods").mark_bar().encode(
         alt.Y("selected_ml_method",title="ML Methods", sort="-x"),
-        alt.X("count()"))
+        alt.X("count()"),
+        alt.Tooltip("count()")).interactive()#.properties(width=300)
     return ml_barplot.to_html()
 
 @app.callback(
@@ -108,9 +124,26 @@ def plot_funct_plot(job, prog_exp__val):
         alt.Y("Q4", title = "Current Level of Education"),
         alt.X("Q8", title = "Recommended Languages to Learn"),
         alt.Color("count()"),
-        alt.Size("count()",title = "Counts", scale = alt.Scale(range = (60, 250))))
+        alt.Size("count()",title = "Counts", scale = alt.Scale(range = (60, 250)))).properties(height=250, width=320)
     return fluct_plot.to_html()
 
+@app.callback(
+    Output('median_salary_l', 'children'),
+    Input('job_title_val', 'value'),
+    Input('slider', 'value'))
+def calculate_salary(job, prog_exp__val):
+    exp_range = slider_recognition(prog_exp__val)
+    data = kaggle_survey.query("Q5 == @job & Q6 == @exp_range")
+    return str(data["lower"].median()) + " (USD)"
+
+@app.callback(
+    Output('median_salary_h', 'children'),
+    Input('job_title_val', 'value'),
+    Input('slider', 'value'))
+def calculate_salary(job, prog_exp__val):
+    exp_range = slider_recognition(prog_exp__val)
+    data = kaggle_survey.query("Q5 == @job & Q6 == @exp_range")
+    return str(data["higher"].median()) + " (USD)"
 
 
 if __name__ == '__main__':
