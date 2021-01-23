@@ -3,7 +3,7 @@ import dash_html_components as html
 import dash_core_components as dcc #Interativity Components
 import dash_bootstrap_components as dbc #layout component
 from dash.dependencies import Input, Output
-import numpy as np
+# import numpy as np
 import pandas as pd
 import altair as alt
 
