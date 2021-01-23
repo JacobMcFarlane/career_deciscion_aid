@@ -9,10 +9,10 @@ import altair as alt
 
 
 
-kaggle_survey = pd.read_csv('data\Processed\general_processed_data.csv', skiprows=[1])
-languages_barplot_data =  pd.read_csv('data\Processed\lang_barplot_data.csv')
-ml_barplot_data = pd.read_csv('data\Processed\ml_barplot_data.csv')
-fluctuation_plot_data = pd.read_csv('data\Processed\Fluctuation_plot_data.csv')
+kaggle_survey = pd.read_csv(r'data/Processed/general_processed_data.csv', skiprows=[1])
+languages_barplot_data =  pd.read_csv(r'data/Processed/lang_barplot_data.csv')
+ml_barplot_data = pd.read_csv(r'data/Processed/ml_barplot_data.csv')
+fluctuation_plot_data = pd.read_csv(r'data/Processed/Fluctuation_plot_data.csv')
 
 def slider_recognition(prog_exp__val):
     if prog_exp__val == 0:
@@ -32,6 +32,7 @@ def slider_recognition(prog_exp__val):
 
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 app.layout = dbc.Container([
     html.H1("Data Science Decision Aid Dashboard", style={'color' : 'red'}),
     html.Br(),

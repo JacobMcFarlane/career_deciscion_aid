@@ -7,7 +7,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 
 # Importing Data
-kaggle_survey = pd.read_csv('MDS/532/career_deciscion_aid/data/kaggle_survey_2020_responses.csv',
+kaggle_survey = pd.read_csv('data/kaggle_survey_2020_responses.csv',
  skiprows=[1])
 
 # Data Munging to Be Offloaded Later
