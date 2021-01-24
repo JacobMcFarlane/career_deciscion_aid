@@ -1,7 +1,7 @@
 
 # Data Science Decision Aid Dashboard
 
-# Heroku Link: https://careeraid.herokuapp.com/
+## Heroku Link: https://careeraid.herokuapp.com/
 
 ## Welcome!
 
@@ -9,7 +9,7 @@ Welcome! Thank you for visiting the Data Science Decision Aid Dashboard app proj
 
 This document (the README file) will guide you through our app and provide you the information for our project.
 
-## Why are we desiging this App?
+## Why are we designing this App?
 
 Data science and computer science starts to get really popular in recent years. Such popularity attracts more people to join and even transfer into this field without knowing too much about it. In fact, data science and computer science is a very large and complex field with various career options, such as data analyst, soft engineer etc. Those different career choices can have completely different concentration and skill requirements. Therefore, we propose building a public available data visualization app to allow people to visually explore the current job market for data science and computer science in more details to differentiate between those occupations. We hope it can be helpful for anyone who is interested in looking for a job in data science, machine learning and computer science field!
 
