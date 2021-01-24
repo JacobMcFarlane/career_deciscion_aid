@@ -34,11 +34,13 @@ def slider_recognition(prog_exp__val):
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 app.layout = dbc.Container([
-    html.H1("Data Science Decision Aid Dashboard", style={'color' : 'red'}),
-    html.Br(),
+    
+    html.H1("Data Science Decision Aid Dashboard", style={'color' : '#D6ED17FF', 'background-color' : '#606060FF'}),
+    #html.Br(),
     html.P("This dashboard has the objective of informing Data Science students,\
              professional and even prospects (future data science professionals) the worldwide state of the art regarding most used programming languages,\
-             machine learning methods, the recommended programs to learn first with a considerable aggregated value(for prospects) and yearly income of different job titles."),
+             machine learning methods, the recommended programs to learn first with a considerable aggregated value(for prospects) and yearly income of different job titles.",
+             style={'color' : '#D6ED17FF', 'background-color' : '#606060FF'}),
     html.Br(),
     dbc.Row([
         dbc.Col([
@@ -69,7 +71,7 @@ app.layout = dbc.Container([
     html.Br(),
     dbc.Row([
         dbc.Col([dbc.Row([html.Label(["Median Salary - Lowest Range:", dbc.Card(dbc.CardBody(id='median_salary_l'), style={'text-align': 'center', 'width': '200%'}, color='warning')])]), 
-        dbc.Row([html.Label(["Median Salary - Highest Range:", dbc.Card(dbc.CardBody(id='median_salary_h'), style={'text-align': 'center', 'width': '200%'}, color='warning')])])], md=6),
+        dbc.Row([html.Label(["Median Salary - Highest Range:", dbc.Card(dbc.CardBody(id='median_salary_h'), style={'text-align': 'center', 'width': '198%'}, color='warning')])])], md=6),
         #html.Br(),
         dbc.Col([html.Iframe(id="fluct_points", style={'border-width': '0', 'width': '600%', 'height': '600px'})], md=6)
        ])])
