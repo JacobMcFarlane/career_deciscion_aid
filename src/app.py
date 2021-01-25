@@ -34,14 +34,15 @@ def slider_recognition(prog_exp__val):
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 app.layout = dbc.Container([
-    
-    html.H1("Data Science Decision Aid Dashboard", style={'color' : '#D6ED17FF', 'background-color' : '#606060FF'}),
+   
+    dbc.Row([html.H1("Data Science Decision Aid Dashboard", style={'color' : '#D6ED17FF', 'background-color' : '#606060FF'}),
     #html.Br(),
     html.P("This dashboard has the objective of informing Data Science students,\
              professional and even prospects (future data science professionals) the worldwide state of the art regarding most used programming languages,\
              machine learning methods, the recommended programs to learn first with a considerable aggregated value(for prospects) and yearly income of different job titles.",
              style={'color' : '#D6ED17FF', 'background-color' : '#606060FF'}),
     html.Br(),
+    ]),
     dbc.Row([
         dbc.Col([
            html.Label(["Programming Experience", dcc.Slider(id='slider',min=0, max=5, marks = {0 : '<1 years', 1 : '1-2 years', 2 : '3-5 years',
