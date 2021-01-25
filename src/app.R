@@ -28,6 +28,7 @@ app$layout(htmlDiv(
 
 app$run_server(debg = T)
 
+# Call back to lang bar graph- currently not working
 app$callback(
   list(output('lang_plot', 'figure')),
   list(input('role_select', 'value')),
@@ -44,6 +45,7 @@ app$callback(
     }
 )
 
+# Code used for debugging- trying to see if issue is with callback
 app$callback(
  list(output('widget-3', 'children')),
  list(input('role_select', 'value')),
